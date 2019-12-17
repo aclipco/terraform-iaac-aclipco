@@ -8,3 +8,10 @@ tags = {
     Name = "HelloWorld" 
   } 
 } 
+
+  user_data = "${file("userdata_file")}" 
+
+tags = { 
+    Name = "HelloWorld" 
+  } 
+} 
