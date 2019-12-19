@@ -12,3 +12,9 @@ output "key_name" {
     value = aws_key_pair.deployer1.key_name 
 
 }
+
+output "wordpress" {
+    value = aws_route53_record.www.name 
+    
+
+}
