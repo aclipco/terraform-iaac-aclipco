@@ -21,10 +21,12 @@ output "wordpress" {
 
 output "wordpress_username" {
     value = "some_username"
+}
 
     output "wordpress_password" {
     value = "some_password"
+    }
 
      output "IPs" {
     value = aws_instance.web.*.public_ip
-    
+     }
