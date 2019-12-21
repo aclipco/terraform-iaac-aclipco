@@ -13,3 +13,10 @@ tags = {
 
   } 
 }
+resource "aws_instance" "imported" {
+  # (resource arguments)
+
+ami           = "ami-00068cd7555f543d5" 
+key_name = aws_key_pair.deployer1.key_name
+security_groups = ["allow_ssh"] 
+}
