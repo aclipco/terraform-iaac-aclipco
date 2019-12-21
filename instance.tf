@@ -9,14 +9,7 @@ resource "aws_instance" "web" {
   user_data = file("userdata_file")
 
 tags = { 
-    Name = "HelloWorld${count.index +1}" 
+    Name = "HelloWorld" 
 
   } 
-}
-resource "aws_instance" "imported" {
-  # (resource arguments)
 
-ami           = "ami-00068cd7555f543d5" 
-key_name = aws_key_pair.deployer1.key_name
-security_groups = ["allow_ssh"] 
-}
