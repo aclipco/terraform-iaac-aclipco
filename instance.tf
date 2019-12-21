@@ -18,6 +18,13 @@ resource "aws_instance" "web" {
         "sudo systemctl start httpd",
         ]
       }
+  provisioner "local-exec" {
+    command = "echo ${aws_instance.web.public_ip} >> public_ips.txt"
+    command = "wget -O /tmp  https://wordpress.org/download/"
+    command = "mkdir /tmp/test"
+  }   
+
+
   lifecycle{
     prevent_destroy = false
   }
