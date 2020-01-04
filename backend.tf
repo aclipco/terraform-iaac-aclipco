@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "anaclipco-state"
+    bucket = "terraform-us-anastasia"
     key    = "infrastructure"
     region = "us-east-1"
   }
