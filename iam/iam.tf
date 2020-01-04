@@ -20,33 +20,38 @@ resource "aws_iam_group_membership" "developers_team" {
 } 
 
 
-resource "aws_iam_policy" "policy" { 
+ resource "aws_iam_role" "test_role" { 
 
-  name = "test_policy3" 
+name = "test_role" 
 
-  path = "/" 
-
-  description = "My test policy" 
-
-  policy = <<EOF 
+assume_role_policy = <<EOF 
 
 { 
 
-"Version": "2012-10-17", 
+  "Version": "2012-10-17", 
 
-"Statement": [ 
+  "Statement": [ 
 
 { 
 
-"Sid": "VisualEditor0", 
+  "Action": "sts:AssumeRole", 
 
-"Effect": "Allow", 
+  "Principal": { 
 
-"Action": "ec2:*", 
+  "Service": "ec2.amazonaws.com" 
 
-"Resource": "*"
+}, 
+
+  "Effect": "Allow", 
+
+  "Sid": "" 
+
+    } 
+
+  ] 
+
 } 
-] 
-} 
+
 EOF 
+
 } 
