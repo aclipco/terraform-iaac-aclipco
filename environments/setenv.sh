@@ -154,3 +154,4 @@ EOF
 
 cat backend.tf 
 rm -rf  .terraform/terraform.tfstate
+terraform init
