@@ -44,7 +44,7 @@ resource "aws_iam_policy" "policy" {
 
 "Action": "ec2:*", 
 
-"Resource": "*" 
+"Resource": "*"
 } 
 ] 
 } 
