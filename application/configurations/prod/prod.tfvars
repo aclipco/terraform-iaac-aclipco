@@ -11,6 +11,7 @@ s3_tfstate_file = "infrastructure.tfstate" #Will be used to set backend.tf
 
 name       = "wordpress1"
 cidr        = "10.10.0.0/16"
+region      = "us-west-1"
 azs1        = "us-west-1a"
 azs2        = "us-west-1b"
 azs3        = "us-west-1c"
