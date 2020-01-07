@@ -12,7 +12,7 @@ module "wordpress1" {
   enable_vpn_gateway = var.enable_vpn_gateway
 
   tags = {
-    Terraform = "true"
-    Environment = "var.env"
+    Terraform = var.terraform
+    Environment = var.environment
   }
 }
