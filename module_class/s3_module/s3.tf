@@ -7,7 +7,7 @@ provider "aws"{
 
 module "bucket1" { 
 
-  source = "./modules" 
+  source = "./module" 
 
   bucketname = "module-bucket-aclipco" 
 
