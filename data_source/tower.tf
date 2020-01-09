@@ -42,7 +42,7 @@ resource "aws_instance" "tower" {
   tags = {
   Name = "HelloWorld"
  }
-}
+  }
 
 resource "aws_route53_record" "tower" { 
   zone_id = "Z4L78S7WOU6VT" 
