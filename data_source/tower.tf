@@ -17,7 +17,7 @@ data "aws_ami" "centos" {
 owners = ["679593333241"] 
 } 
 
-output "ami" { 
+output "centos" { 
   value = "data.aws_ami.centos.id" 
 } 
 
