@@ -44,7 +44,7 @@ resource "aws_instance" "tower" {
  }
 }
 
-  resource "aws_route53_record" "tower" { 
+resource "aws_route53_record" "tower" { 
   zone_id = "Z4L78S7WOU6VT" 
   name    = "tower.example.com" 
   type    = "A" 
