@@ -28,13 +28,13 @@ resource "aws_instance" "tower" {
   instance_type = "t2.micro" 
   key_name = aws_key_pair.towerkey.key_name
   provisioner "remote-exec" { 
-    connection { 
+    connection {
       host = self.public_ip 
       type = "ssh" 
-      user = "centos" 
-      private_key = file("~/.ssh/id_rsa") 
+      user = "centos"
+      private_key = file("~/.ssh/id_rsa")
       inline = [ 
-        "sudo yum install -y epel-release", 
+        "sudo yum install -y epel-release"
         ]
   } 
   
