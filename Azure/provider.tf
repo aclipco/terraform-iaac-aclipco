@@ -69,7 +69,7 @@ resource "azurerm_virtual_machine" "vm1" {
 
     name = "myosdisk1"
 
-    caching = "ReadWrite
+    caching = "ReadWrite"
 
     create_option = "FromImage"
 
